@@ -245,8 +245,4 @@ py qcc_mcp.py --merge
 
 ---
 
-## 开源说明
-
-> **项目地址**：https://github.com/Ace-Kelly/qcc-mcp-batch
-> **开源协议**：MIT
-> 有 bug / 建议随时提 Issue。
+##  有 bug / 建议欢迎随时提 Issue！
