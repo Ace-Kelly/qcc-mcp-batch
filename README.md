@@ -1,9 +1,5 @@
 # 企查查 MCP 批量抓取脚本
 
-> **项目地址**：https://github.com/Ace-Kelly/qcc-mcp-batch
-> **作者**：胡凯琳 · 开源协议：MIT
-> 觉得有用欢迎给个 ⭐ Star，有 bug / 建议随时提 Issue。
-
 通过企查查官方 MCP 接口（agent.qcc.com）批量获取企业 **工商 / 经营 / 风险 / 知产** 四大类字段数据。
 
 - **可用字段数：67 项**（工商 14 / 经营 13 / 风险 34 / 知产 6）
@@ -231,14 +227,14 @@ py qcc_mcp.py --merge
 
 ## FAQ / 坑
 
-| 症状                                                  | 原因                              | 处理                                                                   |
-| ----------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------- |
+| 症状                                                       | 原因                              | 处理                                                                   |
+| ---------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------- |
 | `[配置错误] config.json 里的 Authorization 还没填 Token` | 还没填 token                      | 打开 `config.json` 把 4 处 `YOUR_TOKEN_HERE` 换成自己的 token      |
-| `code 100002: 暂不支持境外IP请求`                 | 你开着 VPN / 代理 / Tailscale     | 关掉代理（或在 Clash 里把 `*.qcc.com` 加 DIRECT 直连规则）后重跑   |
-| `SSL EOF` / `400 Bad Request`                     | cold start 并发竞态               | 脚本自动重试 3 次，一般能恢复；偶发几条可以 `--merge` 后看缺哪条重跑 |
-| `code 300008: 当前积分余额不足`                     | 积分耗尽                          | 充值后直接重跑，断点续爬自动跳过已完成                                 |
-| 所有维度"无匹配项"                                    | USCC/名称错误或该实体不在企查查库 | 核对企业名全称或补一个准确 USCC                                        |
-| 控制台中文乱码                                        | Windows 代码页非 UTF-8            | 跑前 `chcp 65001`，或看 `qcc_data_mcp/_log.txt`（始终 UTF-8）      |
+| `code 100002: 暂不支持境外IP请求`                        | 你开着 VPN / 代理 / Tailscale     | 关掉代理（或在 Clash 里把 `*.qcc.com` 加 DIRECT 直连规则）后重跑     |
+| `SSL EOF` / `400 Bad Request`                          | cold start 并发竞态               | 脚本自动重试 3 次，一般能恢复；偶发几条可以 `--merge` 后看缺哪条重跑 |
+| `code 300008: 当前积分余额不足`                          | 积分耗尽                          | 充值后直接重跑，断点续爬自动跳过已完成                                 |
+| 所有维度"无匹配项"                                         | USCC/名称错误或该实体不在企查查库 | 核对企业名全称或补一个准确 USCC                                        |
+| 控制台中文乱码                                             | Windows 代码页非 UTF-8            | 跑前 `chcp 65001`，或看 `qcc_data_mcp/_log.txt`（始终 UTF-8）      |
 
 ---
 
@@ -251,9 +247,6 @@ py qcc_mcp.py --merge
 
 ## 开源说明
 
-本工具由 **胡凯琳** 开发并分享，采用 **MIT 协议** 开源。
-
-- **GitHub 仓库**：https://github.com/Ace-Kelly/qcc-mcp-batch
-- **Clone 命令**：`git clone https://github.com/Ace-Kelly/qcc-mcp-batch.git`
-- 上不去 GitHub 的同学，直接用群里发的压缩包即可。
-- 用得顺手记得点个 ⭐，bug / 需求欢迎提 Issue。
+> **项目地址**：https://github.com/Ace-Kelly/qcc-mcp-batch
+> **开源协议**：MIT
+> 有 bug / 建议随时提 Issue。
