@@ -1,5 +1,9 @@
 # 企查查 MCP 批量抓取脚本
 
+> **项目地址**：https://github.com/Ace-Kelly/qcc-mcp-batch
+> **作者**：胡凯琳 · 开源协议：MIT
+> 觉得有用欢迎给个 ⭐ Star，有 bug / 建议随时提 Issue。
+
 通过企查查官方 MCP 接口（agent.qcc.com）批量获取企业 **工商 / 经营 / 风险 / 知产** 四大类字段数据。
 
 - **可用字段数：67 项**（工商 14 / 经营 13 / 风险 34 / 知产 6）
@@ -247,4 +251,9 @@ py qcc_mcp.py --merge
 
 ## 开源说明
 
-本工具由胡凯琳开发并分享。github:
+本工具由 **胡凯琳** 开发并分享，采用 **MIT 协议** 开源。
+
+- **GitHub 仓库**：https://github.com/Ace-Kelly/qcc-mcp-batch
+- **Clone 命令**：`git clone https://github.com/Ace-Kelly/qcc-mcp-batch.git`
+- 上不去 GitHub 的同学，直接用群里发的压缩包即可。
+- 用得顺手记得点个 ⭐，bug / 需求欢迎提 Issue。
